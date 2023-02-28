@@ -18,6 +18,7 @@ This will start the timer and display a prompt for you to enter the duration of 
 
 You also have the option to choose a progress bar based timer which will show the current timer progress. An example of the progress bar timer is shown below:
 
+<img width="700" alt="Screenshot 2023-02-28 at 17 48 07" src="https://user-images.githubusercontent.com/70916756/221999447-9bcd95cd-4f7c-48f9-becc-6c428b91f5f9.png">
 
 
 ## Configuration
