@@ -16,6 +16,10 @@ To use the timer, run the following command from the project directory:
 
 This will start the timer and display a prompt for you to enter the duration of the timer in seconds. Once you enter the duration, the timer will start counting down. When the timer reaches zero, a message will be displayed indicating that the timer has ended.
 
+You also have the option to choose a progress bar based timer which will show the current timer progress. An example of the progress bar timer is shown below:
+
+
+
 ## Configuration
 
 The timer can be configured to play a sound when the timer ends. To enable sound, set the `SOUND_ENABLED` environment variable to `true`. By default, sound is disabled.
