@@ -20,6 +20,12 @@ struct Response {
     msg: String,
 }
 
+fn num_generator(limit: u32) -> u32 {
+    use rand::Rng;
+    let mut rng = rand::thread_rng();
+    rng.gen_range(0..limit)
+}
+
 /// This is the main body for the function.
 /// Write your code inside it.
 /// There are some code example in the following URLs:
@@ -28,11 +34,11 @@ struct Response {
 async fn function_handler(event: LambdaEvent<Request>) -> Result<Response, Error> {
     // Extract some useful info from the request
     let command = event.payload.command;
-
+    let lim = command.as_str().parse::<u32>().unwrap_or(100);
     // Prepare the response
     let resp = Response {
         req_id: event.context.request_id,
-        msg: format!("Command {}.", command),
+        msg: format!("Generate a random number up to {}: {}", lim, num_generator(lim)),
     };
 
     // Return `Response` (it will be serialized to JSON automatically by the runtime)
